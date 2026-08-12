@@ -1,0 +1,33 @@
+// Rutor
+rutor.info
+rutracker.org
+
+//WhatsApp
+whatsapp.com
+whatsapp.net
+// не схлопывать: fbsbx.com — общий CDN Meta
+whatsapp.fbsbx.com
+wa.me
+
+// Grok
+grok.com
+x.ai
+
+// OpenAI
+openai.com
+chatgpt.com
+sora.com
+oaistatic.com
+oaiusercontent.com
+// не схлопывать: auth0.com — multi-tenant
+cdn.auth0.com
+
+// Claude
+claude.ai
+claude.com
+anthropic.com
+
+//Others
+auth.docker.io
+onlinesim.io
+ipinfo.io
