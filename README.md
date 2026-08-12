@@ -42,7 +42,6 @@ anthropic.com
 //Others
 auth.docker.io
 onlinesim.io
-ipinfo.io
 ```
 
 <!-- domains:end -->
