@@ -1,0 +1,35 @@
+name: sync-readme
+
+# Держит код-блок со списком в README синхронным с domains.lst.
+on:
+  push:
+    branches: [main]
+    paths:
+      - domains.lst
+      - .github/sync-readme.py
+      - .github/workflows/sync-readme.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Подставить список в README
+        run: python3 .github/sync-readme.py
+
+      - name: Закоммитить, если README изменился
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "Изменений нет"
+            exit 0
+          fi
+          git config user.name  "doxfie"
+          git config user.email "yarik.bogush@gmail.com"
+          git add README.md
+          git commit -m "README: синхронизация списка доменов"
+          git push
