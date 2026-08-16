@@ -39,6 +39,9 @@ claude.ai
 claude.com
 anthropic.com
 
+//Figma
+figma.com
+
 //Others
 auth.docker.io
 onlinesim.io
